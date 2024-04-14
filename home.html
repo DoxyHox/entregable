@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Good+Times&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        table {
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("im/fun.webp");
+            background-size: cover;
+            background-attachment: fixed;
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+
+        h2,
+        p {
+            color: white;
+        }
+
+        nav.navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav.navbar .nav-link {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: white;
+            padding: 5px 15px;
+            margin-right: 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #e0e0e0;
+            background-color: #495057;
+            border-radius: 5px;
+        }
+
+        nav.navbar .logo {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .jumbotron {
+            width: 70%;
+            background-color: rgba(57, 22, 79, 0.1);
+            backdrop-filter: blur(20px) contrast(1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgba(10, 10, 10, 0.5);
+        }
+
+        .jumbotron-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        #demo {
+            width: 100%;
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .jumbotron form label,
+        .jumbotron form input[type="email"],
+        .jumbotron form input[type="password"],
+        .jumbotron form input[type="checkbox"],
+        .jumbotron form button {
+            color: white;
+        }
+
+        .jumbotron form input[type="email"],
+        .jumbotron form input[type="password"],
+        .jumbotron form button {
+            background-color: transparent;
+            border: 1px solid white;
+        }
+
+        .gif-image {
+            width: 200px;
+            height: auto;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+
+    <title>Bienvenido</title>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="index.html">
+            <img src="im/steam.webp" alt="Logo" class="logo">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-slide-to="1" data-target="#demo"></li>
+            <li data-slide-to="2" data-target="#demo"></li>
+            <li data-slide-to="3" data-target="#demo"></li>
+            <li data-slide-to="4" data-target="#demo"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="im/cod.webp" alt="Los Angeles" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/mc.webp" alt="Chicago" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/sp.webp" alt="New York" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/lol.webp" alt="New York" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/mago.webp" alt="New York" width="1100" height="500">
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="jumbotron-container text-white">
+        <div class="jumbotron">
+            <h2>Bienvenido</h2>
+            <p>¡Gracias por registrarte!</p>
+
+            <table class="table table-striped text-white">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Fecha de Registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function loadUsers() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const tableBody = document.querySelector('.table tbody');
+
+            tableBody.innerHTML = '';
+
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const emailCell = document.createElement('td');
+                const dateCell = document.createElement('td');
+                
+                nameCell.textContent = user.name;
+                emailCell.textContent = user.email;
+                dateCell.textContent = user.dateRegistered;
+                
+                row.appendChild(nameCell);
+                row.appendChild(emailCell);
+                row.appendChild(dateCell);
+                tableBody.appendChild(row);
+            });
+        }
+
+        window.onload = loadUsers;
+    </script>
+
+</body>
+
+</html>

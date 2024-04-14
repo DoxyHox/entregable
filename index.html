@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Good+Times&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background-image: url(im/fun.webp);
+            background-size: cover;
+            background-attachment: fixed;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+        h1, p {
+            color: white;
+        }
+
+        nav.navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav.navbar .nav-link {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: white;
+            padding: 5px 15px;
+            margin-right: 10px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #e0e0e0;
+            background-color: #495057;
+            border-radius: 5px;
+        }
+
+        nav.navbar .logo {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        #demo {
+            width: 100%;
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .btn-login {
+            font-size: 25px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: -30px;
+        }
+
+        .floating-container, .floating-button {
+            animation: float 3s infinite ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+
+    <title>Página</title>
+</head>
+
+<body onload="document.body.classList.add('loaded')">
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="index.html">
+            <img src="im/steam.webp" alt="Logo" class="logo">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-slide-to="1" data-target="#demo"></li>
+            <li data-slide-to="2" data-target="#demo"></li>
+            <li data-slide-to="3" data-target="#demo"></li>
+            <li data-slide-to="4" data-target="#demo"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="im/sus.webp" alt="Los Angeles" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/roc.webp" alt="Chicago" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/tou.webp" alt="New York" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/piz.webp" alt="New York" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="im/mago.webp" alt="New York" width="1100" height="500">
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div>
+        <div class="container p-3 my-3 text-center text-white floating-container">
+            <h1>La Diversión está por comenzar</h1>
+            <p>Haz Click en Login Para Iniciar sesión</p>
+        </div>
+        <div class="text-center mt-3">
+            <a href="login.html" class="btn btn-primary btn-login floating-button">
+                Login
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
